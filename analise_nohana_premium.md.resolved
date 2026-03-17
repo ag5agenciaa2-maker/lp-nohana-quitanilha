@@ -1,0 +1,159 @@
+# 🔍 Análise Premium & Minimalista — Nohana Advocacia
+
+## Diagnóstico Geral
+
+O site tem uma **boa estrutura e organização**, mas está visualmente pesado por excesso de elementos, textos longos, seções muito espaçadas e falta de "respiro" visual. A sensação "não premium" vem de 3 problemas centrais:
+
+1. **Seções muito grandes** com padding excessivo (`--space-24` = 6rem em cada seção)
+2. **Excesso de texto** — parágrafos longos que poderiam ser frases curtas e impactantes
+3. **Elementos decorativos demais** — frame-corners, floating-cards, overlays, patterns
+
+---
+
+## 📋 Pontos de Melhoria por Seção
+
+### 1. 🔴 HERO — Seção Inicial
+**Problema:** Muito carregada com badge, título, descrição, 2 botões, 3 stats, imagem com frame decorativo e floating card.
+
+**Melhorias:**
+- ❌ Remover `hero-badge` (★ Nota 5.0 no Google) — informação secundária, polui o hero
+- ❌ Remover `frame-corner` e `frame-accent` da imagem — decoração excessiva
+- ✏️ Reduzir `hero-description` para 1 linha curta e direta
+- ✏️ Manter apenas 1 botão CTA (o principal)
+- ✏️ Reduzir stats para formato mais discreto
+- ✏️ Diminuir tamanho do título `--text-4xl` → entre `--text-3xl` e `--text-4xl`
+
+### 2. 🔴 MARQUEE — Faixa Animada
+**Problema:** Visualmente pesada com fundo bordô sólido.
+
+**Melhorias:**
+- ✏️ Tornar mais sutil — reduzir padding, fonte menor, opacidade de fundo
+- ⚡ Alternativa: trocar por uma linha fina divisória elegante
+
+### 3. 🔴 DOR & SOLUÇÃO — Seção "Sobre"
+**Problema:** A seção MAIS pesada do site. Grid 2 colunas com 4 pain-items + 3 solution-features + CTA + título grande. Muito texto.
+
+**Melhorias:**
+- ✏️ Reduzir de 4 para 3 pain-items (remover um repetitivo)
+- ✏️ Encurtar textos dos pain-items para no máximo 8-10 palavras
+- ✏️ Reduzir padding da seção de `--space-24` para `--space-16`
+- ✏️ Simplificar solution-features — remover descrições, manter só títulos
+- ✏️ Remover o `solution-description` longo (parágrafo)
+- ❌ Remover ícones SVG repetitivos dos pain-items (todos iguais = sem valor)
+
+### 4. 🟡 ENCANTAMENTO — Seção Escura com Cards
+**Problema:** Seção pesada, cards de resultado com textos longos + testimonial-highlight com citação.
+
+**Melhorias:**
+- ✏️ Encurtar textos nos `result-card` para 1 linha
+- ✏️ Remover `testimonial-highlight` OU mover para seção de avaliações
+- ✏️ Reduzir padding geral
+- ✏️ Cards sem ícones SVG grandes — usar ícones menores ou texto-only
+
+### 5. 🟡 SERVIÇOS — Grid de Serviços
+**Problema:** Card principal (Usucapião) ocupa 2 colunas/2 linhas com MUITA informação. Lista de 4 itens + parágrafo longo.
+
+**Melhorias:**
+- ✏️ Card principal: manter imagem mas reduzir texto. Tirar a lista de sub-serviços
+- ✏️ Cards menores: reduzir parágrafos para 1 frase
+- ✏️ Remover `service-badge` "Principal" — desnecessário
+- ✏️ Grid mais compacto
+
+### 6. 🟢 EQUIPE — Seção "Quem Somos"
+**Problema:** 2 parágrafos longos + 3 valores + info OAB. Redundante com hero.
+
+**Melhorias:**
+- ✏️ Reduzir para 1 parágrafo curto e impactante
+- ✏️ Valores em linha horizontal, não vertical
+- ✏️ Manter info OAB mas mais discreta
+
+### 7. 🟢 AVALIAÇÕES — Depoimentos
+**Problema:** Bem estruturada, mas cards com textos longos.
+
+**Melhorias:**
+- ✏️ Limitar depoimentos a 2 linhas (truncar com `...`)
+- ✏️ Reduzir padding dos cards
+- ✏️ Esconder rating de 5 estrelas repetido em cada card (já tem no header)
+
+### 8. 🟡 FAQ — Perguntas Frequentes
+**Problema:** Grid de 2 colunas com 6 perguntas. Seção grande.
+
+**Melhorias:**
+- ✏️ Mudar para 1 coluna centralizada (mais elegante e minimalista)
+- ✏️ Reduzir para 4-5 perguntas
+- ✏️ Respostas mais curtas
+
+### 9. 🔴 CTA + FORMULÁRIO — Seção de Contato
+**Problema:** Grid 2 colunas com 3 contact-items + formulário com 5 campos. Muito pesado.
+
+**Melhorias:**
+- ✏️ Formulário com menos campos (nome + telefone + serviço = suficiente)
+- ❌ Remover campo "e-mail" e "mensagem" — na landing page, pedir o mínimo
+- ✏️ Contact-items mais compactos
+
+### 10. 🟢 LOCALIZAÇÃO + FOOTER
+**Problema:** Bom, mas footer muito detalhado com 4 colunas.
+
+**Melhorias:**
+- ✏️ Footer mais compacto — 3 colunas ou 2
+- ✏️ Remover lista duplicada de serviços no footer
+
+---
+
+## 🎨 Mudanças Globais de CSS para Visual Premium
+
+### Tipografia
+| Atual | Proposta |
+|-------|----------|
+| `Inter` + `Playfair Display` | Manter, mas Inter é genérica — usar peso **300 (light)** mais |
+| Títulos bold pesados | Títulos com peso 400-500 (mais leves) |
+| Textos longos | Frases curtas, max 2 linhas |
+
+### Espaçamento
+| Atual | Proposta |
+|-------|----------|
+| `--space-24` (6rem) padding seções | `--space-16` (4rem) — 33% menor |
+| `gap: --space-16` entre grids | `gap: --space-10` ou `--space-12` |
+| `margin-bottom: --space-16` em headers | `margin-bottom: --space-10` |
+
+### Cores & Contraste
+| Atual | Proposta |
+|-------|----------|
+| Bordô sólido `#800000` | OK, mas usar com mais parcimônia |
+| Gold `#B8860B` excessivo | Reduzir uso, manter só em detalhes pontuais |
+| Off-white `#F8F7F5` alternando | Unificar mais seções em branco puro |
+
+### Elementos Decorativos
+| Remover/Simplificar | Motivo |
+|---------------------|--------|
+| `frame-corner` (4 cantos decorativos) | Poluição visual |
+| `frame-accent` (quadro dourado) | Redundante |
+| `hero-pattern` (SVG de fundo) | Imperceptível mas pesado |
+| `section-tag::before` (linha dourada) | Manter mas mais fina |
+| `btn::before` (shimmer effect) | Remover — efeito genérico |
+
+---
+
+## ⚡ Resumo das Ações Prioritárias
+
+### Alta Prioridade (impacto visual imediato)
+1. **Reduzir padding de TODAS as seções** de 6rem para 4rem
+2. **Encurtar TODOS os textos** — máximo 2 linhas por parágrafo
+3. **Remover decorações do hero** (frame-corners, frame-accent, badge)
+4. **Simplificar seção Dor & Solução** — menos itens, textos menores
+5. **Formulário com 3 campos** em vez de 5
+
+### Média Prioridade
+6. Unificar backgrounds (menos alternância branco/off-white)
+7. Títulos com font-weight mais leve (400-500)
+8. FAQ em coluna única
+9. Remover shimmer dos botões
+
+### Baixa Prioridade
+10. Footer mais compacto
+11. Marquee mais sutil
+12. Micro-ajustes de espaçamento
+
+---
+
+> **Filosofia do ajuste:** "Um design premium se define pelo que você *remove*, não pelo que adiciona."
