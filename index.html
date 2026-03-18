@@ -1198,16 +1198,21 @@
                 }
 
                 .location .location-title {
-                    height: 578px;
-                    transform: translateX(-15px) translateY(43px);
-                    border-top-left-radius: 50px;
-                    border-top-right-radius: 50px;
-                    border-bottom-left-radius: 50px;
-                    border-bottom-right-radius: 50px;
-                    /* Opcional: Centralizar conteúdo verticalmente devido à nova altura fixa */
+                    height: auto;
+                    min-height: 578px;
+                    border-radius: 50px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    margin: 0 auto;
+                    width: 100%;
+                }
+
+                @media (min-width: 900px) {
+                    .location .location-title {
+                        height: 578px;
+                        transform: translateX(-15px) translateY(43px);
+                    }
                 }
 
                 .location .custom-location-grid {
