@@ -11,16 +11,16 @@
         --primary-bordo-light: #A52A2A;
 
         /* Cores de Destaque */
-        --accent-gold: #B8860B;
-        --accent-gold-light: #D4AF37;
-        --accent-gold-dark: #8B6914;
+        --accent-gold: #8F680A; /* Acessibilidade: escurecido o dourado */
+        --accent-gold-light: #B8860B; /* Dourado que estava na cor accent-gold */
+        --accent-gold-dark: #715208;
 
         /* Cores Neutras */
         --white: #FFFFFF;
         --off-white: #F8F7F5;
         --cream: #F5F3F0;
         --light-gray: #E8E6E3;
-        --medium-gray: #9A9896;
+        --medium-gray: #6B6967; /* Acessibilidade: aumentado contraste */
         --dark-gray: #4A4846;
         --charcoal: #2D2B29;
         --black: #1A1918;
