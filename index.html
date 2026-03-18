@@ -641,16 +641,16 @@
                     <span class="section-tag">A Fundadora</span>
                     <h2 class="section-title">Dra. Nohana <span class="highlight">Quintanilha</span></h2>
 
+                    <div class="mobile-only-img-1" style="display: none; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: var(--space-6); margin-top: var(--space-4);">
+                        <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (11).jpeg" alt="Dra. Nohana Quintanilha" style="width: 100%;">
+                    </div>
+
                     <p class="team-description">
                         Referência em Direito Imobiliário, a Dra. Nohana é <strong>Presidente da OAB de Campo
                             Grande/RJ</strong>, garantindo máxima credibilidade, honra e autoridade no trato de cada
                         caso. Formada em Direito pela Universidade Federal Fluminense (UFF), atua com excelência para
                         destrancar a vida financeira de dezenas de famílias.
                     </p>
-                    
-                    <div class="mobile-only-img-1" style="display: none; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: var(--space-6);">
-                        <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (10).jpeg" alt="Dra. Nohana Quintanilha" style="width: 100%;">
-                    </div>
 
                     <div class="team-values">
                         <div class="value">
@@ -797,19 +797,19 @@
             </div>
             
             <div class="gallery-grid" id="story-gallery">
-                <div class="gal-item gal-1">
+                <div class="gal-item gal-1" onclick="openLightbox(this)">
                     <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (18).jpeg" alt="Dra. Nohana - Trabalho Constante">
                 </div>
-                <div class="gal-item gal-2">
+                <div class="gal-item gal-2" onclick="openLightbox(this)">
                     <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (14).jpeg" alt="Reunião">
                 </div>
-                <div class="gal-item gal-3">
+                <div class="gal-item gal-3" onclick="openLightbox(this)">
                     <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (11).jpeg" alt="Foco na documentação">
                 </div>
-                <div class="gal-item gal-4">
+                <div class="gal-item gal-4" onclick="openLightbox(this)">
                     <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (15).jpeg" alt="Detalhe de Contratos">
                 </div>
-                <div class="gal-item gal-5">
+                <div class="gal-item gal-5" onclick="openLightbox(this)">
                     <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (13).jpeg" alt="Dra. Nohana e Equipe">
                 </div>
             </div>
@@ -820,31 +820,51 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const gallery = document.getElementById('story-gallery');
-            if (gallery && window.innerWidth <= 900) {
-                let scrollSpeed = 1;
+            if (gallery) {
                 let isHovered = false;
                 let scrollInterval;
+                let currentIndex = 0;
                 
                 const startScroll = () => {
                     scrollInterval = setInterval(() => {
-                        if(!isHovered) {
-                            gallery.scrollLeft += scrollSpeed;
-                            if(gallery.scrollLeft >= (gallery.scrollWidth - gallery.clientWidth)) {
-                                scrollSpeed = -1; // reverte direção ao chegar no fim
-                            } else if (gallery.scrollLeft <= 0) {
-                                scrollSpeed = 1;
+                        if(!isHovered && window.innerWidth <= 900) {
+                            const items = gallery.querySelectorAll('.gal-item');
+                            if(items.length > 0) {
+                                currentIndex++;
+                                if(currentIndex >= items.length) {
+                                    currentIndex = 0;
+                                }
+                                // Em vez de smooth scroll behavior (que falha no iOS com snap), 
+                                // usando scrollIntoView com block nearest para ser robusto e forçar animação
+                                items[currentIndex].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                             }
                         }
-                    }, 30);
+                    }, 3500); // Passa o story a cada 3.5 segundos
                 };
 
                 startScroll();
 
-                gallery.addEventListener('touchstart', () => { isHovered = true; });
+                // Pausa quando o usuário clica/segura ou passa o dedo
+                gallery.addEventListener('touchstart', () => { 
+                    isHovered = true; 
+                    clearInterval(scrollInterval);
+                }, {passive: true});
+                
                 gallery.addEventListener('touchend', () => { 
                     isHovered = false; 
-                    // Snap correction if needed
-                });
+                    startScroll();
+                }, {passive: true});
+
+                // Sincroniza o índice se o usuário arrastar
+                gallery.addEventListener('scroll', () => {
+                    if (isHovered && window.innerWidth <= 900) {
+                        const items = gallery.querySelectorAll('.gal-item');
+                        if (items.length > 0) {
+                            const itemWidth = items[0].clientWidth + 12;
+                            currentIndex = Math.round(gallery.scrollLeft / itemWidth);
+                        }
+                    }
+                }, {passive: true});
             }
         });
     </script>
@@ -899,10 +919,6 @@
             <div class="posse-header" style="text-align: center; max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
                 <span class="section-tag">Representatividade e Liderança</span>
                 <h2 class="section-title" style="white-space: nowrap;">Posse na <span class="highlight">OAB Campo Grande</span></h2>
-                
-                <div class="mobile-only-img-1" style="display: none; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: var(--space-6); margin-top: var(--space-4);">
-                    <img src="Imagens da Posse/posse_subsecao_campo_grande_21.jpeg" alt="Posse OAB" style="width: 100%;">
-                </div>
 
                 <div style="margin-top: var(--space-4); text-align: center; max-width: 600px; padding: 10px;">
                     <p class="section-subtitle" style="margin: 0; font-style: italic; font-size: 1.1rem; color: var(--dark-gray); text-align: center;">
@@ -935,27 +951,27 @@
                 </div>
 
                 <div class="posse-gallery">
-                    <div class="span-2">
+                    <div class="span-2" onclick="openLightbox(this)">
                         <img src="Imagens da Posse/posse_subsecao_campo_grande_3.jpeg" alt="Cerimônia de Posse OAB"
                             class="posse-img">
                     </div>
-                    <div>
+                    <div onclick="openLightbox(this)">
                         <img src="Imagens da Posse/posse_subsecao_campo_grande_2.jpeg" alt="Discurso Posse OAB"
                             class="posse-img">
                     </div>
-                    <div>
+                    <div onclick="openLightbox(this)">
                         <img src="Imagens da Posse/posse_subsecao_campo_grande_5.jpeg" alt="Autoridades Posse OAB"
                             class="posse-img">
                     </div>
-                    <div>
+                    <div onclick="openLightbox(this)">
                         <img src="Imagens da Posse/posse_subsecao_campo_grande_1.jpg" alt="Equipe OAB"
                             class="posse-img">
                     </div>
-                    <div>
+                    <div onclick="openLightbox(this)">
                         <img src="Imagens da Posse/posse_subsecao_campo_grande_21.jpeg" alt="Momento Posse OAB"
                             class="posse-img">
                     </div>
-                    <div class="span-2">
+                    <div class="span-2 mobile-only-img-1" style="display: none;" onclick="openLightbox(this)">
                         <img src="Imagens da Posse/posse_subsecao_campo_grande_19.jpeg" alt="Diretoria OAB Campo Grande"
                             class="posse-img">
                     </div>
@@ -1446,6 +1462,103 @@
     </div>
 
     <script src="script.js"></script>
+    <!-- Lightbox Pop-Up (Adicionado para Galeria e Posse OAB) -->
+    <div id="imageLightbox" class="lightbox-overlay" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+            <img id="lightboxImg" src="" alt="Ampliação da imagem">
+        </div>
+    </div>
+    <style>
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            z-index: 99999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            /* Moldura Premium */
+            border: 4px solid var(--accent-gold);
+        }
+        .lightbox-content img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 8px; /* Borda redonda na foto interna */
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+            z-index: 2;
+        }
+        .lightbox-close:hover {
+            color: var(--accent-gold);
+        }
+    </style>
+    <script>
+        function openLightbox(element) {
+            const imgEl = element.querySelector('img');
+            if (imgEl) {
+                const lightbox = document.getElementById('imageLightbox');
+                const lightboxImg = document.getElementById('lightboxImg');
+                lightboxImg.src = imgEl.src;
+                lightbox.classList.add('active');
+            }
+        }
+        function closeLightbox(event) {
+            // Fecha so se clicar no fundo (overlay) ou no botão de fechar
+            const lightbox = document.getElementById('imageLightbox');
+            const content = document.querySelector('.lightbox-content img');
+            if (event.target !== content) {
+                lightbox.classList.remove('active');
+                setTimeout(() => { lightboxImg.src = ""; }, 300); // clear
+            }
+        }
+        // Navegação de teclado para Lightbox ou Galeria
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeLightbox(event);
+            }
+            // Para as galerias mobiles de scroll no teclado:
+            if(window.innerWidth <= 900) {
+                const storyGallery = document.getElementById('story-gallery');
+                if (storyGallery) {
+                    const itemWidth = storyGallery.querySelector('.gal-item').clientWidth + 12;
+                    if (event.key === "ArrowRight") {
+                         storyGallery.scrollBy({ left: itemWidth, behavior: 'smooth' });
+                    } else if (event.key === "ArrowLeft") {
+                         storyGallery.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
