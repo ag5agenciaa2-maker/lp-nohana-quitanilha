@@ -11,16 +11,16 @@
         --primary-bordo-light: #A52A2A;
 
         /* Cores de Destaque */
-        --accent-gold: #8F680A; /* Acessibilidade: escurecido o dourado */
-        --accent-gold-light: #B8860B; /* Dourado que estava na cor accent-gold */
-        --accent-gold-dark: #715208;
+        --accent-gold: #B8860B;
+        --accent-gold-light: #D4AF37;
+        --accent-gold-dark: #8B6914;
 
         /* Cores Neutras */
         --white: #FFFFFF;
         --off-white: #F8F7F5;
         --cream: #F5F3F0;
         --light-gray: #E8E6E3;
-        --medium-gray: #6B6967; /* Acessibilidade: aumentado contraste */
+        --medium-gray: #9A9896;
         --dark-gray: #4A4846;
         --charcoal: #2D2B29;
         --black: #1A1918;
@@ -2032,20 +2032,6 @@
 
     div.footer-legal-links {
         margin-top: 6px;
-    }
-
-    /* Ajustes Específicos para Desktop no Footer */
-    @media (min-width: 900px) {
-        footer > div:nth-of-type(1) > div > div:nth-of-type(2) {
-            margin-right: 89px;
-            padding-right: 0px;
-            padding-bottom: 0px;
-            padding-left: 61px;
-        }
-
-        footer > div:nth-of-type(1) > div > div:nth-of-type(3) {
-            padding-left: 58px;
-        }
     }
 
     /* Footer Bottom */
