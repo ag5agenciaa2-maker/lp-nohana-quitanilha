@@ -42,15 +42,13 @@
     <link rel="icon" type="image/x-icon" href="logos+favicon/icon-empresa-favicon.ico">
     <link rel="apple-touch-icon" href="logos+favicon/icon-empresa-favicon.ico">
     
-    <!-- Otimização CSS Asíncrono (PageSpeed) -->
+    <!-- Otimização CSS -->
     <link rel="preload" href="cookie-banner.css" as="style">
     <link rel="stylesheet" href="cookie-banner.css" media="print" onload="this.media='all'">
-    <link rel="preload" href="style.css" as="style">
-    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="cookie-banner.css">
-        <link rel="stylesheet" href="style.css">
-    </noscript>
+    <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
+    
+    <!-- CSS Principal (Carregamento Síncrono para evitar FOUC) -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- Preloads Críticos -->
     <link rel="preload" href="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg" as="image" media="(min-width: 769px)">
