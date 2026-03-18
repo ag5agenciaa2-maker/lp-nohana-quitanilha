@@ -135,6 +135,7 @@
                     <h2 class="pt-title">
                         Seu patrimônio é o resultado de uma vida. <span class="highlight-bordo">A regularização não deve tirar sua paz.</span>
                     </h2>
+                    <img src="Imagens da Doutora Nohana/resolucao-mobile.jpeg" class="mobile-only-img-1" style="display: none; width: 100%; border-radius: var(--radius-lg); margin-bottom: var(--space-6); box-shadow: var(--shadow-md);" alt="Dor e Solução">
                     <div class="pt-description">
                         <p>Sabemos que o receio de perder um imóvel ou enfrentar processos intermináveis gera enorme insegurança. A irregularidade não é apenas um papel faltando; é um risco real para a tranquilidade da sua família.</p>
                         <p>Assumimos toda a complexidade da documentação imobiliária para que você tenha absoluta certeza de que seu patrimônio está 100% legalizado e documentado.</p>
@@ -175,6 +176,14 @@
                     <span class="section-tag">Nosso Espaço</span>
                     <h2 class="section-title">Um ambiente planejado para o seu <span class="highlight">conforto</span>
                     </h2>
+                    
+                    <div class="mobile-only-img-1" style="display: none; border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 4/5; box-shadow: var(--shadow-lg); width: 100%; margin: var(--space-6) 0;">
+                        <video controls autoplay loop muted playsinline aria-label="Vídeo do interior do escritório" style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="Videos como chegar no escritorio e imagens no escritorio e equipe/nosso-escritorio.mp4" type="video/mp4">
+                            <img src="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg"
+                                alt="Equipe Nohana Quintanilha Advocacia">
+                        </video>
+                    </div>
 
                     <p class="team-description">
                         Atendimento humanizado, transparente e focado em soluções. Tratamos cada cliente com dedicação,
@@ -229,6 +238,10 @@
                 <div class="team-text">
                     <span class="section-tag">Nossa Equipe</span>
                     <h2 class="section-title">Profissionais unidos pelo <span class="highlight">seu caso</span></h2>
+                    
+                    <div class="mobile-only-img-1" style="display: none; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); margin: var(--space-6) 0;">
+                        <img src="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg" alt="Equipe Nohana Quintanilha Advocacia" style="width: 100%; height: auto; object-fit: cover;">
+                    </div>
                     
                     <p class="team-description">
                         No <strong>Nohana Quintanilha Advocacia</strong>, nosso time atua de maneira direcionada e especializada. Cada processo é conduzido cuidadosamente por nossa equipe experiente para encontrar as melhores estratégias jurídicas. 
@@ -634,6 +647,10 @@
                         caso. Formada em Direito pela Universidade Federal Fluminense (UFF), atua com excelência para
                         destrancar a vida financeira de dezenas de famílias.
                     </p>
+                    
+                    <div class="mobile-only-img-1" style="display: none; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: var(--space-6);">
+                        <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (10).jpeg" alt="Dra. Nohana Quintanilha" style="width: 100%;">
+                    </div>
 
                     <div class="team-values">
                         <div class="value">
@@ -715,14 +732,19 @@
         .gal-5 { grid-column: 5 / 11; height: 500px; }
         
         @media (max-width: 900px) {
-            .gal-1, .gal-2, .gal-3, .gal-4, .gal-5 {
-                grid-column: 1 / -1;
-                transform: none;
-                height: 400px;
-                margin-bottom: var(--space-2);
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 8px !important;
             }
+            .gal-item {
+                grid-column: span 1 !important;
+                transform: none !important;
+                height: 200px !important;
+                margin-bottom: 0 !important;
+            }
+            .gal-1 { grid-column: 1 / -1 !important; height: 300px !important; }
             .gal-item img {
-                height: 400px;
+                height: 100% !important;
             }
         }
     </style>
