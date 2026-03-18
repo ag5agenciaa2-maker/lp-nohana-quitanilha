@@ -13,13 +13,23 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleNavbarScroll() {
         const currentScroll = window.pageYOffset;
         
+        // Adiciona background escuro após rolar 100px
         if (currentScroll > 100) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
+
+        // Lógica de Scroll Inteligente: Esconder rolando para baixo, mostrar para cima
+        if (currentScroll > lastScroll && currentScroll > 200) {
+            // Scroll down
+            navbar.classList.add('navbar-hidden');
+        } else {
+            // Scroll up
+            navbar.classList.remove('navbar-hidden');
+        }
         
-        lastScroll = currentScroll;
+        lastScroll = currentScroll <= 0 ? 0 : currentScroll; // Posição atual ou 0
     }
     
     window.addEventListener('scroll', handleNavbarScroll, { passive: true });
@@ -46,6 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = '';
             });
         });
+
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        if (closeMobileMenu) {
+            closeMobileMenu.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
     }
     
     // ========================================
@@ -291,10 +310,35 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
+            // Collect data
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const serviceSelect = document.getElementById('service');
+            const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+            const message = document.getElementById('message').value;
+
+            // Build WhatsApp Message
+            let textMsg = `Olá, me chamo ${name}, vim através do site e gostaria de uma informação.\n\n`;
+            textMsg += `- E-mail: ${email}\n`;
+            textMsg += `- Telefone: ${phone}\n`;
+            textMsg += `- Assunto/Serviço: ${serviceText}\n`;
+            if (message.trim() !== '') {
+                textMsg += `- Mensagem/Situação: ${message}`;
+            }
+
+            // Encode string for URL
+            const encodedText = encodeURIComponent(textMsg);
+
+            // WhatsApp number (from the site)
+            const waNumber = '5521971534620';
+
+            // Redirect to WhatsApp
+            window.open(`https://wa.me/${waNumber}?text=${encodedText}`, '_blank');
+            
             // Show toast
             if (toast) {
                 toast.classList.add('show');
-                
                 setTimeout(() => {
                     toast.classList.remove('show');
                 }, 4000);

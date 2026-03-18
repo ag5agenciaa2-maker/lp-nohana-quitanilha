@@ -6,18 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Nohana Quintanilha Advocacia - Escritório especializado em direito imobiliário, usucapião e regularização de imóveis em Campo Grande, Rio de Janeiro.">
-    <meta property="og:image" content="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg">
+
+    <!-- Open Graph / WhatsApp / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nohanaquintanilha.com.br/">
+    <meta property="og:title" content="Nohana Quintanilha Advocacia | Direito Imobiliário & Usucapião">
+    <meta property="og:description"
+        content="Escritório especializado em direito imobiliário, usucapião e regularização de imóveis em Campo Grande, Rio de Janeiro.">
+    <!-- ATENÇÃO: O WhatsApp exige URLs absolutas (com https://). Ajuste 'https://www.nohanaquintanilha.com.br/' para o domínio real quando publicar. -->
+    <meta property="og:image"
+        content="https://www.nohanaquintanilha.com.br/Videos%20como%20chegar%20no%20escritorio%20e%20imagens%20no%20escritorio%20e%20equipe/hero-equipe.jpeg">
+    <meta property="og:image:secure_url"
+        content="https://www.nohanaquintanilha.com.br/Videos%20como%20chegar%20no%20escritorio%20e%20imagens%20no%20escritorio%20e%20equipe/hero-equipe.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:site_name" content="Nohana Quintanilha Advocacia">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nohana Quintanilha Advocacia | Direito Imobiliário & Usucapião">
+    <meta name="twitter:description" content="Escritório especializado em direito imobiliário, usucapião e regularização de imóveis em Campo Grande, Rio de Janeiro.">
+    <meta name="twitter:image" content="https://www.nohanaquintanilha.com.br/Videos%20como%20chegar%20no%20escritorio%20e%20imagens%20no%20escritorio%20e%20equipe/hero-equipe.jpeg">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.nohanaquintanilha.com.br/">
+
+    <!-- Geo Tags (Local SEO) -->
+    <meta name="geo.region" content="BR-RJ">
+    <meta name="geo.placename" content="Campo Grande, Rio de Janeiro">
+    <meta name="geo.position" content="-22.906551;-43.568550">
+    <meta name="ICBM" content="-22.906551, -43.568550">
+
     <title>Nohana Quintanilha Advocacia | Direito Imobiliário & Usucapião</title>
     <link rel="icon" type="image/x-icon" href="logos+favicon/icon-empresa-favicon.ico">
     <link rel="apple-touch-icon" href="logos+favicon/icon-empresa-favicon.ico">
+    
+    <!-- Otimização CSS Asíncrono (PageSpeed) -->
+    <link rel="preload" href="cookie-banner.css" as="style">
+    <link rel="stylesheet" href="cookie-banner.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="cookie-banner.css">
+        <link rel="stylesheet" href="style.css">
+    </noscript>
+
+    <!-- Preloads Críticos -->
+    <link rel="preload" href="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg" as="image" media="(min-width: 769px)">
+    <link rel="preload" href="Imagens da Doutora Nohana/hero-mobile.jpeg" as="image" media="(max-width: 768px)">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
         rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -27,7 +71,8 @@
             <a href="#" class="logo" style="display: flex; align-items: center; text-decoration: none;">
                 <picture>
                     <source media="(max-width: 768px)" srcset="logos+favicon/img-empresa-mobile.webp">
-                    <img src="logos+favicon/img-empresa-desktop.webp" alt="Nohana Quintanilha Advocacia" style="height: 40px; width: auto; object-fit: contain;">
+                    <img src="logos+favicon/img-empresa-desktop.webp" alt="Nohana Quintanilha Advocacia" width="200" height="40"
+                        style="height: 40px; width: auto; object-fit: contain;">
                 </picture>
                 <div class="logo-text">
                     <span class="logo-name">NOHANA QUINTANILHA</span>
@@ -36,19 +81,41 @@
             </a>
 
             <ul class="nav-menu" id="navMenu">
+                <li class="mobile-nav-item mobile-nav-logo">
+                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; border-bottom: 1px solid var(--off-white); padding-bottom: var(--space-4); margin-bottom: var(--space-4);">
+                        <a href="#" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+                            <picture>
+                                <img src="logos+favicon/img-empresa-mobile.webp" alt="Nohana Quintanilha Advocacia" width="160" height="44"
+                                    style="height: 44px; width: auto; object-fit: contain;">
+                            </picture>
+                            <div class="logo-text" style="margin-left: 8px;">
+                                <span class="logo-name" style="color: var(--primary-bordo)">NOHANA QUINTANILHA</span>
+                            </div>
+                        </a>
+                        <button id="closeMobileMenu" style="background: none; border: none; font-size: 28px; cursor: pointer; color: var(--primary-bordo); padding: 5px; line-height: 1;" aria-label="Fechar Menu">&times;</button>
+                    </div>
+                </li>
                 <li><a href="#inicio" class="nav-link">Início</a></li>
                 <li><a href="#sobre" class="nav-link">Sobre</a></li>
                 <li><a href="#servicos" class="nav-link">Serviços</a></li>
                 <li><a href="#avaliacoes" class="nav-link">Avaliações</a></li>
                 <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li><a href="#contato" class="nav-link">Contato</a></li>
+                <li class="mobile-nav-item mobile-nav-cta">
+                    <a href="https://wa.me/5521971534620?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." class="nav-cta" target="_blank"
+                        style="margin-top: var(--space-6); display: flex; width: 100%; justify-content: center; gap: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                </svg>
+                        Fale Conosco
+                    </a>
+                </li>
             </ul>
 
-            <a href="https://wa.me/5521971534620" class="nav-cta" target="_blank">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path
-                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
+            <a href="https://wa.me/5521971534620?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." class="nav-cta" target="_blank" style="gap: 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                </svg>
                 Fale Conosco
             </a>
 
@@ -64,20 +131,29 @@
     <section class="premium-hero" id="inicio">
         <div class="hero-bg-image">
             <style>
-                .hero-img-mob { display: none; }
+                .hero-img-mob {
+                    display: none;
+                }
+
                 @media (max-width: 768px) {
-                    .hero-img-desk { display: none !important; }
-                    .hero-img-mob { 
-                        display: block !important; 
-                        width: 100%; 
-                        height: 100%; 
-                        object-fit: cover; 
-                        object-position: center top; 
+                    .hero-img-desk {
+                        display: none !important;
+                    }
+
+                    .hero-img-mob {
+                        display: block !important;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center top;
                     }
                 }
             </style>
-            <img class="hero-img-desk" src="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg" alt="Equipe Nohana Quintanilha Advocacia">
-            <img class="hero-img-mob" src="Imagens da Doutora Nohana/hero-mobile.jpeg" alt="Nohana Quintanilha Advocacia">
+            <img class="hero-img-desk" width="1920" height="1080"
+                src="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg"
+                alt="Equipe Nohana Quintanilha Advocacia" fetchpriority="high">
+            <img class="hero-img-mob" width="1080" height="1920" src="Imagens da Doutora Nohana/hero-mobile.jpeg"
+                alt="Nohana Quintanilha Advocacia" fetchpriority="high">
             <div class="hero-gradient-overlay"></div>
         </div>
 
@@ -91,16 +167,17 @@
                     confiar.
                 </h1>
             </div>
-            
+
             <div class="hero-right-col">
                 <p class="premium-description">
-                    Especialistas em direito imobiliário e usucapião. Comprometidos em proteger seus direitos patrimoniais e familiares com profissionalismo e integridade.
+                    Especialistas em direito imobiliário e usucapião. Comprometidos em proteger seus direitos
+                    patrimoniais e familiares com profissionalismo e integridade.
                 </p>
-                <a href="#contato" class="premium-btn">
-                    <span>Solicite uma consulta gratuita</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
+                <a href="https://wa.me/5521971534620?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="premium-btn" style="gap: 12px; font-weight: 500;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                </svg>
+                    <span>Agende uma orientação</span>
                 </a>
             </div>
         </div>
@@ -144,21 +221,29 @@
             <div class="pt-grid">
                 <div class="pt-text">
                     <h2 class="pt-title">
-                        Seu patrimônio é o resultado de uma vida. <span class="highlight-bordo">A regularização não deve tirar sua paz.</span>
+                        Seu patrimônio é o resultado de uma vida. <span class="highlight-bordo">A regularização não deve
+                            tirar sua paz.</span>
                     </h2>
-                    <img src="Imagens da Doutora Nohana/resolucao-mobile.jpeg" class="mobile-only-img-1" style="display: none; width: 100%; border-radius: var(--radius-lg); margin-bottom: var(--space-6); box-shadow: var(--shadow-md);" alt="Dor e Solução">
+                    <img src="Imagens da Doutora Nohana/resolucao-mobile.jpeg" alt="Resolução"
+                        class=" mobile-only-img-1"
+                        style="width: 100%; border-radius: var(--radius-lg); margin-bottom: var(--space-6); box-shadow: var(--shadow-md);"
+                        loading="lazy">
                     <div class="pt-description">
-                        <p>Sabemos que o receio de perder um imóvel ou enfrentar processos intermináveis gera enorme insegurança. A irregularidade não é apenas um papel faltando; é um risco real para a tranquilidade da sua família.</p>
-                        <p>Assumimos toda a complexidade da documentação imobiliária para que você tenha absoluta certeza de que seu patrimônio está 100% legalizado e documentado.</p>
+                        <p>Sabemos que o receio de perder um imóvel ou enfrentar processos intermináveis gera enorme
+                            insegurança. A irregularidade não é apenas um papel faltando; é um risco real para a
+                            tranquilidade da sua família.</p>
+                        <p>Assumimos toda a complexidade da documentação imobiliária para que você tenha absoluta
+                            certeza de que seu patrimônio está 100% legalizado e documentado.</p>
                     </div>
                     <div class="pt-lead-in">
                         <p>E a construção dessa segurança começa no momento em que você entra pela nossa porta.</p>
                         <div class="pt-line"></div>
                     </div>
                 </div>
-                
+
                 <div class="pt-image-group">
-                    <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (12).jpeg" alt="Atendimento Especializado Nohana Quintanilha" class="pt-img-main">
+                    <img src="Imagens da Doutora Nohana/resolucao-mobile.jpeg"
+                        alt="Atendimento Especializado Nohana Quintanilha" class="pt-img-main" loading="lazy">
                 </div>
             </div>
         </div>
@@ -187,10 +272,14 @@
                     <span class="section-tag">Nosso Espaço</span>
                     <h2 class="section-title">Um ambiente planejado para o seu <span class="highlight">conforto</span>
                     </h2>
-                    
-                    <div class="mobile-only-img-1" style="display: none; border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 4/5; box-shadow: var(--shadow-lg); width: 100%; margin: var(--space-6) 0;">
-                        <video controls autoplay loop muted playsinline aria-label="Vídeo do interior do escritório" style="width: 100%; height: 100%; object-fit: cover;">
-                            <source src="Videos como chegar no escritorio e imagens no escritorio e equipe/nosso-escritorio.mp4" type="video/mp4">
+
+                    <div class="mobile-only-img-1"
+                        style="border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 4/5; box-shadow: var(--shadow-lg); width: 100%; margin: var(--space-6) 0;">
+                        <video controls autoplay loop muted playsinline aria-label="Vídeo do interior do escritório"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                            <source
+                                src="Videos como chegar no escritorio e imagens no escritorio e equipe/nosso-escritorio.mp4"
+                                type="video/mp4">
                             <img src="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg"
                                 alt="Equipe Nohana Quintanilha Advocacia">
                         </video>
@@ -228,7 +317,7 @@
                                     <polyline points="20 6 9 17 4 12" />
                                 </svg>
                             </div>
-                            <span>Resultados</span>
+                            <span>Orientação Estratégica</span>
                         </div>
                     </div>
 
@@ -249,22 +338,29 @@
                 <div class="team-text">
                     <span class="section-tag">Nossa Equipe</span>
                     <h2 class="section-title">Profissionais unidos pelo <span class="highlight">seu caso</span></h2>
-                    
-                    <div class="mobile-only-img-1" style="display: none; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); margin: var(--space-6) 0;">
-                        <img src="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg" alt="Equipe Nohana Quintanilha Advocacia" style="width: 100%; height: auto; object-fit: cover;">
+
+                    <div class="mobile-only-img-1"
+                        style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); margin: var(--space-6) 0;">
+                        <img src="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg"
+                            alt="Equipe Nohana Quintanilha Advocacia"
+                            style="width: 100%; height: auto; object-fit: cover;">
                     </div>
-                    
+
                     <p class="team-description">
-                        No <strong>Nohana Quintanilha Advocacia</strong>, nosso time atua de maneira direcionada e especializada. Cada processo é conduzido cuidadosamente por nossa equipe experiente para encontrar as melhores estratégias jurídicas. 
+                        No <strong>Nohana Quintanilha Advocacia</strong>, nosso time atua de maneira direcionada e
+                        especializada. Cada processo é conduzido cuidadosamente por nossa equipe experiente para
+                        encontrar as melhores estratégias jurídicas.
                     </p>
                     <p class="team-description">
-                        Trabalhamos lado a lado com você, unindo conhecimento técnico e atendimento humanizado para proporcionar tranquilidade absoluta sobre o seu patrimônio do início ao fim do processo.
+                        Trabalhamos lado a lado com você, unindo conhecimento técnico e atendimento humanizado para
+                        proporcionar segurança jurídica e clareza sobre o seu patrimônio do início ao fim do processo.
                     </p>
 
                     <div class="team-values">
                         <div class="value">
                             <div class="value-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                     <circle cx="9" cy="7" r="4" />
                                     <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -277,8 +373,11 @@
                 </div>
 
                 <div class="team-image">
-                    <div class="image-wrapper" style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg);">
-                        <img src="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg" alt="Equipe Nohana Quintanilha Advocacia" style="width: 100%; height: auto; object-fit: cover;">
+                    <div class="image-wrapper"
+                        style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg);">
+                        <img src="Videos como chegar no escritorio e imagens no escritorio e equipe/hero-equipe.jpeg"
+                            alt="Equipe Nohana Quintanilha Advocacia"
+                            style="width: 100%; height: auto; object-fit: cover;">
                         <div class="image-accent"></div>
                     </div>
                 </div>
@@ -290,13 +389,15 @@
     <section class="services-premium" id="servicos">
         <div class="section-container">
             <div class="sp-header">
-                <span class="section-tag" style="letter-spacing: 0.15em; font-size: 0.8rem; text-transform: uppercase;">Nossa experiência jurídica</span>
+                <span class="section-tag"
+                    style="letter-spacing: 0.15em; font-size: 0.8rem; text-transform: uppercase;">Nossa experiência
+                    jurídica</span>
                 <h2 class="sp-title">
                     <span class="text-bordo">Serviços jurídicos abrangentes,</span>
-                    personalizados para proteger seus direitos e garantir seu futuro.
+                    personalizados para proteger seus direitos e buscar a segurança patrimonial.
                 </h2>
             </div>
-            
+
             <div class="sp-grid">
                 <!-- Left: Tab Links -->
                 <div class="sp-tabs">
@@ -323,18 +424,24 @@
                     <div id="tab-usucapiao" class="sp-tab-content active">
                         <div class="sp-image-box">
                             <div class="sp-img-container">
-                                <img src="Imagens de Servicos/1-usucapiao.png" alt="Usucapião Ilustração" class="sp-image">
+                                <img src="Imagens de Servicos/1-usucapiao.png" alt="Usucapião Ilustração"
+                                    class="sp-image" loading="lazy">
                                 <span class="sp-img-tag">* Imagem Ilustrativa</span>
                                 <div class="sp-icon-overlay">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.2">
                                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                         <polyline points="9 22 9 12 15 12 15 22"></polyline>
                                     </svg>
                                 </div>
                             </div>
                             <div class="sp-desc">
-                                <p>Regularização completa do seu imóvel de forma ágil e segura (judicial ou extrajudicial).</p>
-                                <a href="https://wa.me/5521999999999" target="_blank" class="sp-btn-whatsapp">Saiba mais <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+                                <p>Regularização completa do seu imóvel de forma ágil e segura (judicial ou
+                                    extrajudicial).</p>
+                                <a href="https://wa.me/5521971534620?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20sobre%20Usucapi%C3%A3o." target="_blank" rel="noopener noreferrer" aria-label="Saiba mais sobre Usucapião via WhatsApp" class="sp-btn-whatsapp">Saiba mais
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                </svg></a>
                             </div>
                         </div>
                     </div>
@@ -342,10 +449,12 @@
                     <div id="tab-imobiliario" class="sp-tab-content">
                         <div class="sp-image-box">
                             <div class="sp-img-container">
-                                <img src="Imagens de Servicos/2-imobiliario.png" alt="Direito Imobiliário" class="sp-image">
+                                <img src="Imagens de Servicos/2-imobiliario.png" alt="Direito Imobiliário"
+                                    class="sp-image" loading="lazy">
                                 <span class="sp-img-tag">* Imagem Ilustrativa</span>
                                 <div class="sp-icon-overlay">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.2">
                                         <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                                         <line x1="3" y1="9" x2="21" y2="9" />
                                         <line x1="9" y1="21" x2="9" y2="9" />
@@ -354,7 +463,10 @@
                             </div>
                             <div class="sp-desc">
                                 <p>Soluções seguras para locação, condomínios e compra e venda.</p>
-                                <a href="https://wa.me/5521999999999" target="_blank" class="sp-btn-whatsapp">Saiba mais <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+                                <a href="https://wa.me/5521971534620?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20sobre%20Direito%20Imobili%C3%A1rio." target="_blank" rel="noopener noreferrer" aria-label="Saiba mais sobre Direito Imobiliário via WhatsApp" class="sp-btn-whatsapp">Saiba mais
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                </svg></a>
                             </div>
                         </div>
                     </div>
@@ -362,10 +474,12 @@
                     <div id="tab-regularizacao" class="sp-tab-content">
                         <div class="sp-image-box">
                             <div class="sp-img-container">
-                                <img src="Imagens de Servicos/3-regularizacao.png" alt="Regularização de Imóveis" class="sp-image">
+                                <img src="Imagens de Servicos/3-regularizacao.png" alt="Regularização de Imóveis"
+                                    class="sp-image" loading="lazy">
                                 <span class="sp-img-tag">* Imagem Ilustrativa</span>
                                 <div class="sp-icon-overlay">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.2">
                                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                                         <polyline points="14 2 14 8 20 8" />
                                         <line x1="16" y1="13" x2="8" y2="13" />
@@ -376,7 +490,10 @@
                             </div>
                             <div class="sp-desc">
                                 <p>Emissão de certidões, registros e resolução de pendências em cartórios.</p>
-                                <a href="https://wa.me/5521999999999" target="_blank" class="sp-btn-whatsapp">Saiba mais <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+                                <a href="https://wa.me/5521971534620?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20sobre%20Regulariza%C3%A7%C3%A3o%20de%20Im%C3%B3veis." target="_blank" rel="noopener noreferrer" aria-label="Saiba mais sobre Regularização de Imóveis via WhatsApp" class="sp-btn-whatsapp">Saiba mais
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                </svg></a>
                             </div>
                         </div>
                     </div>
@@ -384,10 +501,11 @@
                     <div id="tab-familia" class="sp-tab-content">
                         <div class="sp-image-box">
                             <div class="sp-img-container">
-                                <img src="Imagens de Servicos/4-familia.png" alt="Direito de Família" class="sp-image">
+                                <img src="Imagens de Servicos/4-familia.png" alt="Direito de Família" class="sp-image" loading="lazy">
                                 <span class="sp-img-tag">* Imagem Ilustrativa</span>
                                 <div class="sp-icon-overlay">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.2">
                                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                         <circle cx="9" cy="7" r="4" />
                                         <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -397,7 +515,10 @@
                             </div>
                             <div class="sp-desc">
                                 <p>Apoio estratégico e humanizado em inventários, divórcios e partilhas.</p>
-                                <a href="https://wa.me/5521999999999" target="_blank" class="sp-btn-whatsapp">Saiba mais <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+                                <a href="https://wa.me/5521971534620?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20sobre%20Direito%20de%20Fam%C3%ADlia." target="_blank" rel="noopener noreferrer" aria-label="Saiba mais sobre Direito de Família via WhatsApp" class="sp-btn-whatsapp">Saiba mais
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                </svg></a>
                             </div>
                         </div>
                     </div>
@@ -405,17 +526,21 @@
                     <div id="tab-civil" class="sp-tab-content">
                         <div class="sp-image-box">
                             <div class="sp-img-container">
-                                <img src="Imagens de Servicos/5-civil.png" alt="Direito Civil" class="sp-image">
+                                <img src="Imagens de Servicos/5-civil.png" alt="Direito Civil" class="sp-image" loading="lazy">
                                 <span class="sp-img-tag">* Imagem Ilustrativa</span>
                                 <div class="sp-icon-overlay">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.2">
                                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                                     </svg>
                                 </div>
                             </div>
                             <div class="sp-desc">
                                 <p>Atendimento focado em contratos, indenizações e direito civil moderno.</p>
-                                <a href="https://wa.me/5521999999999" target="_blank" class="sp-btn-whatsapp">Saiba mais <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+                                <a href="https://wa.me/5521971534620?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20sobre%20Direito%20Civil." target="_blank" rel="noopener noreferrer" aria-label="Saiba mais sobre Direito Civil via WhatsApp" class="sp-btn-whatsapp">Saiba mais
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                </svg></a>
                             </div>
                         </div>
                     </div>
@@ -445,13 +570,16 @@
     <!-- Avaliações Section (Infinito Horizontal Minimalista) -->
     <section class="testimonials" id="avaliacoes">
         <div class="section-container">
-            <div class="testimonials-header" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: var(--space-12);">
+            <div class="testimonials-header"
+                style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: var(--space-12);">
                 <span class="section-tag">Depoimentos</span>
                 <h2 class="section-title" style="margin-bottom: var(--space-2);">
                     O que dizem sobre nós
                 </h2>
-                <div style="display: flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-sans); color: var(--text-600); font-size: 1.15rem; font-weight: 500;">
-                    no <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" style="height: 28px; transform: translateY(2px);">
+                <div
+                    style="display: flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-sans); color: var(--text-600); font-size: 1.15rem; font-weight: 500;">
+                    no <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"
+                        style="height: 28px; transform: translateY(2px);">
                 </div>
             </div>
 
@@ -465,7 +593,9 @@
                                 <h4>Ricardo Seara</h4>
                             </div>
                         </div>
-                        <p class="testimonial-text">"A experiência que eu e minha família tivemos com a contratação do escritório da Dra. Nohana foi espetacular. Um processo que estava a mais de dez anos tramitando, após a contratação deste escritório foi rapidamente acelerado e concluído."</p>
+                        <p class="testimonial-text">"A experiência que eu e minha família tivemos com a contratação do
+                            escritório da Dra. Nohana foi espetacular. Um processo que estava a mais de dez anos
+                            tramitando, após a contratação deste escritório foi conduzido com clareza e transparência."</p>
                     </div>
 
                     <div class="testimonial-item highlight-card">
@@ -485,7 +615,9 @@
                                 <h4>Luan Carvalho</h4>
                             </div>
                         </div>
-                        <p class="testimonial-text">"Nohana Quintanilha Advocacia em Campo Grande, RJ, é reconhecida por sua sólida expertise jurídica e comprometimento. Sua equipe experiente oferece soluções eficazes."</p>
+                        <p class="testimonial-text">"Nohana Quintanilha Advocacia em Campo Grande, RJ, é reconhecida por
+                            sua sólida expertise jurídica e comprometimento. Sua equipe experiente oferece soluções
+                            eficazes."</p>
                     </div>
 
                     <div class="testimonial-item">
@@ -505,7 +637,9 @@
                                 <h4>Isaque</h4>
                             </div>
                         </div>
-                        <p class="testimonial-text">"Uma equipe excelente, com um ótimo atendimento e experiência no mercado. Resolveram meu problema rapidamente e sempre me explicaram cada etapa do processo."</p>
+                        <p class="testimonial-text">"Uma equipe excelente, com um ótimo atendimento e experiência no
+                            mercado. Atuaram com muito profissionalismo e sempre me explicaram cada etapa do processo."
+                        </p>
                     </div>
 
                     <div class="testimonial-item">
@@ -545,7 +679,7 @@
                                 <h4>Igor Pitanga</h4>
                             </div>
                         </div>
-                        <p class="testimonial-text">"Conseguiu resolver a documentação do meu terreno"</p>
+                        <p class="testimonial-text">"Prestou uma excelente assessoria na documentação do meu terreno"</p>
                     </div>
 
                     <!-- Grupo 2 (Duplicado para o efeito infinito suave) -->
@@ -556,7 +690,9 @@
                                 <h4>Ricardo Seara</h4>
                             </div>
                         </div>
-                        <p class="testimonial-text">"A experiência que eu e minha família tivemos com a contratação do escritório da Dra. Nohana foi espetacular. Um processo que estava a mais de dez anos tramitando, após a contratação deste escritório foi rapidamente acelerado e concluído."</p>
+                        <p class="testimonial-text">"A experiência que eu e minha família tivemos com a contratação do
+                            escritório da Dra. Nohana foi espetacular. Um processo que estava a mais de dez anos
+                            tramitando, após a contratação deste escritório foi conduzido com clareza e transparência."</p>
                     </div>
 
                     <div class="testimonial-item highlight-card">
@@ -576,7 +712,9 @@
                                 <h4>Luan Carvalho</h4>
                             </div>
                         </div>
-                        <p class="testimonial-text">"Nohana Quintanilha Advocacia em Campo Grande, RJ, é reconhecida por sua sólida expertise jurídica e comprometimento. Sua equipe experiente oferece soluções eficazes."</p>
+                        <p class="testimonial-text">"Nohana Quintanilha Advocacia em Campo Grande, RJ, é reconhecida por
+                            sua sólida expertise jurídica e comprometimento. Sua equipe experiente oferece soluções
+                            eficazes."</p>
                     </div>
 
                     <div class="testimonial-item">
@@ -596,7 +734,9 @@
                                 <h4>Isaque</h4>
                             </div>
                         </div>
-                        <p class="testimonial-text">"Uma equipe excelente, com um ótimo atendimento e experiência no mercado. Resolveram meu problema rapidamente e sempre me explicaram cada etapa do processo."</p>
+                        <p class="testimonial-text">"Uma equipe excelente, com um ótimo atendimento e experiência no
+                            mercado. Atuaram com muito profissionalismo e sempre me explicaram cada etapa do processo."
+                        </p>
                     </div>
 
                     <div class="testimonial-item">
@@ -636,7 +776,7 @@
                                 <h4>Igor Pitanga</h4>
                             </div>
                         </div>
-                        <p class="testimonial-text">"Conseguiu resolver a documentação do meu terreno"</p>
+                        <p class="testimonial-text">"Prestou uma excelente assessoria na documentação do meu terreno"</p>
                     </div>
                 </div>
             </div>
@@ -652,8 +792,10 @@
                     <span class="section-tag">A Fundadora</span>
                     <h2 class="section-title">Dra. Nohana <span class="highlight">Quintanilha</span></h2>
 
-                    <div class="mobile-only-img-1" style="display: none; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: var(--space-6); margin-top: var(--space-4);">
-                        <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (11).jpeg" alt="Dra. Nohana Quintanilha" style="width: 100%;">
+                    <div class="mobile-only-img-1"
+                        style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: var(--space-6); margin-top: var(--space-4);">
+                        <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (11).jpeg"
+                            alt="Dra. Nohana Quintanilha" style="width: 100%;">
                     </div>
 
                     <p class="team-description">
@@ -714,36 +856,43 @@
             padding: var(--space-20) 0;
             background-color: var(--off-white);
             overflow: hidden;
-            max-width: 100vw;
+            max-width: 100%;
             width: 100%;
             box-sizing: border-box;
         }
+
         .editorial-gallery .section-container {
             padding: 0;
             position: relative;
             max-width: 100%;
             overflow: hidden;
         }
+
         .editorial-gallery .section-container::before,
         .editorial-gallery .section-container::after {
             content: '';
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 15%; /* Degrade nas laterais na versao web */
+            width: 15%;
+            /* Degrade nas laterais na versao web */
             min-width: 50px;
             z-index: 2;
             pointer-events: none;
         }
+
         .editorial-gallery .section-container::before {
             left: 0;
-            background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
         }
+
         .editorial-gallery .section-container::after {
             right: 0;
-            background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
         }
-        .editorial-gallery .section-tag, .editorial-gallery .section-title {
+
+        .editorial-gallery .section-tag,
+        .editorial-gallery .section-title {
             padding-left: var(--space-6);
             padding-right: var(--space-6);
         }
@@ -754,16 +903,19 @@
             overflow-x: auto !important;
             scroll-snap-type: x mandatory !important;
             gap: 20px !important;
-            padding: 0 10vw 20px 10vw !important; /* Center focus */
+            padding: 0 10vw 20px 10vw !important;
+            /* Center focus */
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
         }
+
         .gallery-grid::-webkit-scrollbar {
             display: none;
         }
 
         .gal-item {
-            flex: 0 0 calc(33.333% - 20px) !important; /* 3 itens no desktop */
+            flex: 0 0 calc(33.333% - 20px) !important;
+            /* 3 itens no desktop */
             scroll-snap-align: center !important;
             height: 500px !important;
             transform: none !important;
@@ -772,27 +924,44 @@
             overflow: hidden;
             cursor: pointer;
         }
-        
+
+        @keyframes panImageHorizontally {
+            0% {
+                object-position: 0% 50%;
+            }
+
+            100% {
+                object-position: 100% 50%;
+            }
+        }
+
         .gal-item img {
             width: 100%;
             height: 100% !important;
             object-fit: cover;
+            object-position: 0% 50%;
             display: block;
             transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: panImageHorizontally 1s infinite alternate linear;
         }
+
         .gal-item:hover img {
             transform: scale(1.05);
+            animation-play-state: paused;
         }
 
         @media (max-width: 900px) {
             .gal-item {
-                flex: 0 0 80% !important; /* 1 item no mobile */
+                flex: 0 0 80% !important;
+                /* 1 item no mobile */
                 height: 450px !important;
             }
+
             .editorial-gallery .section-container::before,
             .editorial-gallery .section-container::after {
                 display: none;
             }
+
             .gallery-grid {
                 padding: 0 20px 20px 20px !important;
                 gap: 12px !important;
@@ -804,25 +973,32 @@
     <section class="editorial-gallery">
         <div class="section-container">
             <div style="text-align: center; margin-bottom: var(--space-12);">
-                <span class="section-tag" style="letter-spacing: 0.15em; font-size: 0.8rem; text-transform: uppercase;">A Mente por Trás dos Resultados</span>
+                <span class="section-tag"
+                    style="letter-spacing: 0.15em; font-size: 0.8rem; text-transform: uppercase;">A Mente por Trás dos
+                    Resultados</span>
                 <h2 class="section-title">Dra. Nohana em <span class="highlight text-bordo">Ação</span></h2>
             </div>
-            
+
             <div class="gallery-grid" id="story-gallery">
                 <div class="gal-item gal-1" onclick="openLightbox(this)">
-                    <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (18).jpeg" alt="Dra. Nohana - Trabalho Constante">
+                    <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (18).jpeg"
+                        alt="Dra. Nohana - Trabalho Constante">
                 </div>
                 <div class="gal-item gal-2" onclick="openLightbox(this)">
-                    <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (14).jpeg" alt="Reunião">
+                    <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (14).jpeg"
+                        alt="Reunião">
                 </div>
                 <div class="gal-item gal-3" onclick="openLightbox(this)">
-                    <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (11).jpeg" alt="Foco na documentação">
+                    <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (11).jpeg"
+                        alt="Foco na documentação">
                 </div>
                 <div class="gal-item gal-4" onclick="openLightbox(this)">
-                    <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (15).jpeg" alt="Detalhe de Contratos">
+                    <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (15).jpeg"
+                        alt="Detalhe de Contratos">
                 </div>
                 <div class="gal-item gal-5" onclick="openLightbox(this)">
-                    <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (13).jpeg" alt="Dra. Nohana e Equipe">
+                    <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (13).jpeg"
+                        alt="Dra. Nohana e Equipe">
                 </div>
                 <div class="gal-item gal-6" onclick="openLightbox(this)">
                     <img src="Imagens da Doutora Nohana/hero-mobile.jpeg" alt="Dra. Nohana">
@@ -839,45 +1015,61 @@
                 let isHovered = false;
                 let scrollInterval;
                 let currentIndex = 0;
-                
+                let isVisible = false;
+
+                // Intersection Observer para só animar quando estiver visível na tela
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        isVisible = entry.isIntersecting;
+                        if (isVisible && !scrollInterval) {
+                            startScroll();
+                        } else if (!isVisible && scrollInterval) {
+                            clearInterval(scrollInterval);
+                            scrollInterval = null;
+                        }
+                    });
+                }, { threshold: 0.2 });
+
+                observer.observe(gallery);
+
                 const startScroll = () => {
                     scrollInterval = setInterval(() => {
-                        if(!isHovered) {
+                        if (!isHovered && isVisible) {
                             const items = gallery.querySelectorAll('.gal-item');
-                            if(items.length > 0) {
+                            if (items.length > 0) {
                                 currentIndex++;
-                                if(currentIndex >= items.length) {
+                                if (currentIndex >= items.length) {
                                     currentIndex = 0;
                                 }
-                                // Usar scrollTo na horizontal para não puxar a página verticalmente (âncora)
-                                const itemWidth = items[0].clientWidth + 20;
+                                // Rola a galeria horizontalmente com suavidade
+                                const style = window.getComputedStyle(items[0]);
+                                const marginRight = parseFloat(style.marginRight) || 0;
+                                const itemWidth = items[0].clientWidth + 20; // 20px de gap
                                 gallery.scrollTo({ left: currentIndex * itemWidth, behavior: 'smooth' });
                             }
                         }
                     }, 3500); // Passa o story a cada 3.5 segundos
                 };
 
-                startScroll();
-
                 // Pausa quando o usuário interage
-                gallery.addEventListener('touchstart', () => { 
-                    isHovered = true; 
-                    clearInterval(scrollInterval);
-                }, {passive: true});
-                
-                gallery.addEventListener('touchend', () => { 
-                    isHovered = false; 
-                    startScroll();
-                }, {passive: true});
+                gallery.addEventListener('touchstart', () => {
+                    isHovered = true;
+                    if (scrollInterval) clearInterval(scrollInterval);
+                }, { passive: true });
 
-                gallery.addEventListener('mouseenter', () => { 
-                    isHovered = true; 
-                    clearInterval(scrollInterval);
+                gallery.addEventListener('touchend', () => {
+                    isHovered = false;
+                    if (isVisible && !scrollInterval) startScroll();
+                }, { passive: true });
+
+                gallery.addEventListener('mouseenter', () => {
+                    isHovered = true;
+                    if (scrollInterval) clearInterval(scrollInterval);
                 });
-                
-                gallery.addEventListener('mouseleave', () => { 
-                    isHovered = false; 
-                    startScroll();
+
+                gallery.addEventListener('mouseleave', () => {
+                    isHovered = false;
+                    if (isVisible && !scrollInterval) startScroll();
                 });
 
                 // Sincroniza o índice se o usuário arrastar
@@ -885,11 +1077,11 @@
                     if (isHovered) {
                         const items = gallery.querySelectorAll('.gal-item');
                         if (items.length > 0) {
-                            const itemWidth = items[0].clientWidth + 12;
+                            const itemWidth = items[0].clientWidth + 20;
                             currentIndex = Math.round(gallery.scrollLeft / itemWidth);
                         }
                     }
-                }, {passive: true});
+                }, { passive: true });
             }
         });
     </script>
@@ -941,12 +1133,15 @@
     <section class="posse-section" id="posse-oab"
         style="padding: var(--space-16) 0; background-color: var(--surface-50); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
         <div class="section-container">
-            <div class="posse-header" style="text-align: center; max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <div class="posse-header"
+                style="text-align: center; max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
                 <span class="section-tag">Representatividade e Liderança</span>
-                <h2 class="section-title" style="white-space: nowrap;">Posse na <span class="highlight">OAB Campo Grande</span></h2>
+                <h2 class="section-title" style="white-space: nowrap;">Posse na <span class="highlight">OAB Campo
+                        Grande</span></h2>
 
                 <div style="margin-top: var(--space-4); text-align: center; max-width: 600px; padding: 10px;">
-                    <p class="section-subtitle" style="margin: 0; font-style: italic; font-size: 1.1rem; color: var(--dark-gray); text-align: center;">
+                    <p class="section-subtitle"
+                        style="margin: 0; font-style: italic; font-size: 1.1rem; color: var(--dark-gray); text-align: center;">
                         “Queremos uma instituição próxima aos advogados e advogadas, queremos ser acolhedores.”
                     </p>
                 </div>
@@ -1043,7 +1238,7 @@
                     <div class="faq-answer">
                         <p>O tempo varia conforme a complexidade do caso. Usucapião extrajudicial pode levar de 3 a 6
                             meses. Processos judiciais podem levar de 1 a 3 anos, mas com nossa metodologia já
-                            conseguimos resolver casos que estavam parados há mais de 10 anos em tempo recorde. Cada
+                            atuamos de forma estratégica para dar o andamento necessário e destrancar casos antigos. Cada
                             caso é único e faremos uma avaliação personalizada.</p>
                     </div>
                 </div>
@@ -1091,7 +1286,7 @@
         <!-- Imagem e Overlay (Fundo Esquerdo) -->
         <div class="cta-image-bg">
             <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (9) (1).jpeg"
-                alt="Dra. Nohana Quintanilha em seu escritório prestando serviços jurídicos">
+                alt="Dra. Nohana Quintanilha em seu escritório prestando serviços jurídicos" loading="lazy">
             <div class="cta-gradient-overlay"></div>
         </div>
 
@@ -1289,7 +1484,7 @@
                             </div>
                             <div class="location-text">
                                 <h4 style="text-align: center;">Telefone</h4>
-                                <p style="text-align: center;"><a href="https://wa.me/5521971534620" target="_blank"
+                                <p style="text-align: center;"><a href="tel:+5521971534620"
                                         style="color: inherit; text-decoration: none;">(21) 97153-4620</a></p>
                             </div>
                         </div>
@@ -1357,14 +1552,20 @@
         <div class="footer-main">
             <div class="footer-container">
                 <div class="footer-brand">
-                    <a href="#" class="footer-logo" style="display: flex; align-items: center; text-decoration: none; margin-bottom: var(--space-4);">
+                    <a href="#" class="footer-logo"
+                        style="display: flex; align-items: center; text-decoration: none; margin-bottom: var(--space-4);">
                         <picture>
                             <source media="(max-width: 768px)" srcset="logos+favicon/img-empresa-mobile.webp">
-                            <img src="logos+favicon/img-empresa-desktop.webp" alt="Nohana Quintanilha Advocacia" style="height: 50px; width: auto; object-fit: contain;">
+                            <img src="logos+favicon/img-empresa-desktop.webp" alt="Nohana Quintanilha Advocacia"
+                                style="height: 50px; width: auto; object-fit: contain;">
                         </picture>
                         <div class="logo-text" style="margin-left: 12px; display: flex; flex-direction: column;">
-                            <span class="logo-name" style="color: var(--white); font-weight: 700; font-size: 1.1rem; letter-spacing: 0.05em; line-height: 1.2;">NOHANA QUINTANILHA</span>
-                            <span class="logo-sub" style="color: rgba(255,255,255,0.7); font-size: 0.75rem; letter-spacing: 0.02em;">Sociedade Individual de Advocacia</span>
+                            <span class="logo-name"
+                                style="color: var(--white); font-weight: 700; font-size: 1.1rem; letter-spacing: 0.05em; line-height: 1.2;">NOHANA
+                                QUINTANILHA</span>
+                            <span class="logo-sub"
+                                style="color: rgba(255,255,255,0.7); font-size: 0.75rem; letter-spacing: 0.02em;">Sociedade
+                                Individual de Advocacia</span>
                         </div>
                     </a>
                     <p class="footer-description">
@@ -1372,7 +1573,7 @@
                         Protegendo seu patrimônio com dedicação e excelência.
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/nohanaquintanilha_advocacia/" target="_blank"
+                        <a href="https://www.instagram.com/nohanaquintanilha_advocacia/" target="_blank" rel="noopener noreferrer"
                             aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
@@ -1381,13 +1582,13 @@
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                             </svg>
                         </a>
-                        <a href="https://www.facebook.com/nohanaadvocacia/" target="_blank" aria-label="Facebook">
+                        <a href="https://www.facebook.com/nohanaadvocacia/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                             </svg>
                         </a>
-                        <a href="https://br.linkedin.com/in/nohanaquintanilha" target="_blank" aria-label="LinkedIn">
+                        <a href="https://br.linkedin.com/in/nohanaquintanilha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path
@@ -1396,10 +1597,9 @@
                                 <circle cx="4" cy="4" r="2" />
                             </svg>
                         </a>
-                        <a href="https://share.google/m2Vr6a5Vae4eboNR0" target="_blank" aria-label="Google Business">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <a href="https://share.google/m2Vr6a5Vae4eboNR0" target="_blank" rel="noopener noreferrer" aria-label="Google Business">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.187 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
                             </svg>
                         </a>
                     </div>
@@ -1434,7 +1634,7 @@
                     <h4>Contato</h4>
                     <ul>
                         <li>
-                            <a href="https://share.google/m2Vr6a5Vae4eboNR0" target="_blank">
+                            <a href="https://share.google/m2Vr6a5Vae4eboNR0" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -1445,7 +1645,7 @@
                         </li>
                         <li>
                             <a href="https://maps.google.com/?q=Av.+Maria+Teresa,+260+-+LOJA+B+-+Campo+Grande,+Rio+de+Janeiro+-+RJ,+23050-160"
-                                target="_blank">
+                                target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
@@ -1455,11 +1655,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/5521971534620" target="_blank">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            <a href="https://wa.me/5521971534620?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" style="gap: 8px; display: inline-flex; align-items: center;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
                                 </svg>
                                 (21) 97153-4620
                             </a>
@@ -1471,11 +1669,25 @@
 
         <div class="footer-bottom">
             <div class="footer-container">
-                <p class="footer-credits-left">
-                    © 2026 Nohana Quintanilha Advocacia · OAB RJ nº 015.828/2023
-                </p>
-                <p class="footer-credits-right">
-                    Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank">AG5 Agência</a>
+                <div class="footer-credits-left">
+                    <p style="margin: 0;">© 2026 Nohana Quintanilha Advocacia · OAB RJ nº 015.828/2023</p>
+                    <div class="footer-legal-links" style="margin-top: 6px; font-size: 11px; opacity: 0.7; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                        <a href="#" id="ck-prefs-link" style="text-decoration:none; color:inherit; display:inline-flex; align-items:center; gap:6px;">
+                            <span style="display:inline-flex; align-items:center; width:28px; height:14px; background:rgba(255,255,255,0.1); border-radius:10px; padding:2px; border:1px solid rgba(255,255,255,0.2); position:relative; font-size:8px; font-weight:bold;">
+                                <span style="color:#86EFAC; margin-left:2px;">✓</span>
+                                <span style="color:#FCA5A5; margin-left:auto; margin-right:2px;">✕</span>
+                                <span style="position:absolute; left:15px; width:10px; height:10px; background:var(--accent-gold); border-radius:50%; box-shadow:0 0 5px rgba(0,0,0,0.3);"></span>
+                            </span>
+                            Cookies
+                        </a>
+                        <span style="margin: 0;">|</span>
+                        <a href="termos-e-condicoes.html" style="text-decoration: none; color: inherit;">Termos e Condições</a>
+                        <span style="margin: 0;">|</span>
+                        <a href="politica-de-privacidade.html" style="text-decoration: none; color: inherit;">Política de Privacidade</a>
+                    </div>
+                </div>
+                <p class="footer-credits-right" style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap; justify-content: flex-end;">
+                    <span>Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank">AG5 Agência</a></span>
                 </p>
             </div>
         </div>
@@ -1491,7 +1703,7 @@
         <div class="toast-message">Mensagem enviada com sucesso!</div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <!-- Lightbox Pop-Up (Adicionado para Galeria e Posse OAB) -->
     <div id="imageLightbox" class="lightbox-overlay" onclick="closeLightbox(event)">
         <div class="lightbox-content">
@@ -1514,28 +1726,33 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
+
         .lightbox-overlay.active {
             display: flex;
             opacity: 1;
         }
+
         .lightbox-content {
             position: relative;
             max-width: 90%;
             max-height: 85vh;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
             /* Moldura Premium */
             border: 4px solid var(--accent-gold);
         }
+
         .lightbox-content img {
             display: block;
             width: 100%;
             height: auto;
             max-height: 80vh;
             object-fit: contain;
-            border-radius: 8px; /* Borda redonda na foto interna */
+            border-radius: 8px;
+            /* Borda redonda na foto interna */
         }
+
         .lightbox-close {
             position: absolute;
             top: 10px;
@@ -1544,9 +1761,10 @@
             font-size: 35px;
             font-weight: bold;
             cursor: pointer;
-            text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
             z-index: 2;
         }
+
         .lightbox-close:hover {
             color: var(--accent-gold);
         }
@@ -1571,23 +1789,366 @@
             }
         }
         // Navegação de teclado para Lightbox ou Galeria
-        document.addEventListener('keydown', function(event) {
+        document.addEventListener('keydown', function (event) {
             if (event.key === "Escape") {
                 closeLightbox(event);
             }
             // Para as galerias mobiles de scroll no teclado:
-            if(window.innerWidth <= 900) {
+            if (window.innerWidth <= 900) {
                 const storyGallery = document.getElementById('story-gallery');
                 if (storyGallery) {
                     const itemWidth = storyGallery.querySelector('.gal-item').clientWidth + 12;
                     if (event.key === "ArrowRight") {
-                         storyGallery.scrollBy({ left: itemWidth, behavior: 'smooth' });
+                        storyGallery.scrollBy({ left: itemWidth, behavior: 'smooth' });
                     } else if (event.key === "ArrowLeft") {
-                         storyGallery.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+                        storyGallery.scrollBy({ left: -itemWidth, behavior: 'smooth' });
                     }
                 }
             }
         });
+    </script>
+    <!-- ========== BANNER DE ACEITE ========== -->
+    <div id="ck-banner" class="ck-banner" role="dialog" aria-modal="true" aria-label="Aviso de cookies"
+        aria-live="polite" aria-hidden="true">
+        <div class="ck-banner__inner">
+            <div class="ck-banner__content">
+                <h2 class="ck-banner__title">Valorizamos sua privacidade</h2>
+                <p class="ck-banner__text">
+                    Utilizamos cookies para aprimorar sua experiência de navegação, exibir conteúdo
+                    personalizado e analisar nosso tráfego. Ao clicar em <strong>"Aceitar todos"</strong>,
+                    você concorda com nosso uso de cookies conforme nossa
+                    <a href="#" class="ck-banner__link">Política de Privacidade</a>.
+                </p>
+            </div>
+            <div class="ck-banner__actions">
+                <button id="ck-customize" class="ck-btn ck-btn--ghost">Personalizar</button>
+                <button id="ck-reject" class="ck-btn ck-btn--outline">Rejeitar</button>
+                <button id="ck-accept-all" class="ck-btn ck-btn--primary">Aceitar todos</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== MODAL DE PERSONALIZAÇÃO ========== -->
+    <div id="ck-modal" class="ck-modal" role="dialog" aria-modal="true"
+        aria-label="Personalizar preferências de cookies" aria-hidden="true">
+        <div class="ck-modal__overlay" id="ck-modal-overlay"></div>
+        <div class="ck-modal__box">
+
+            <div class="ck-modal__header">
+                <h2 class="ck-modal__title">Personalizar preferências de consentimento</h2>
+                <button class="ck-modal__close" id="ck-modal-close" aria-label="Fechar modal">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="ck-modal__body">
+                <p class="ck-modal__intro">
+                    Utilizamos cookies para ajudar você a navegar com eficiência e executar certas funções.
+                    Os cookies classificados como <strong>"Necessário"</strong> são essenciais para o
+                    funcionamento básico do site e não podem ser desativados.
+                </p>
+
+                <!-- Categoria: Necessário (sempre ativo) -->
+                <div class="ck-category">
+                    <div class="ck-category__header">
+                        <div class="ck-category__info">
+                            <h3 class="ck-category__name">Necessário</h3>
+                            <p class="ck-category__desc">
+                                Essenciais para o funcionamento do site. Não armazenam dados pessoalmente
+                                identificáveis.
+                            </p>
+                        </div>
+                        <span class="ck-category__badge">Sempre ativo</span>
+                    </div>
+                </div>
+
+                <!-- Categoria: Funcional -->
+                <div class="ck-category">
+                    <div class="ck-category__header">
+                        <div class="ck-category__info">
+                            <h3 class="ck-category__name">Funcional</h3>
+                            <p class="ck-category__desc">
+                                Ajudam a executar funcionalidades como compartilhamento em mídia social e recursos de
+                                terceiros.
+                            </p>
+                        </div>
+                        <label class="ck-toggle" aria-label="Ativar cookies funcionais">
+                            <input type="checkbox" id="ck-functional" name="functional">
+                            <span class="ck-toggle__slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Categoria: Analítico -->
+                <div class="ck-category">
+                    <div class="ck-category__header">
+                        <div class="ck-category__info">
+                            <h3 class="ck-category__name">Analítico</h3>
+                            <p class="ck-category__desc">
+                                Usados para entender como os visitantes interagem com o site (visitantes, taxa de
+                                rejeição,
+                                etc.).
+                            </p>
+                        </div>
+                        <label class="ck-toggle" aria-label="Ativar cookies analíticos">
+                            <input type="checkbox" id="ck-analytics" name="analytics">
+                            <span class="ck-toggle__slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Categoria: Desempenho -->
+                <div class="ck-category">
+                    <div class="ck-category__header">
+                        <div class="ck-category__info">
+                            <h3 class="ck-category__name">Desempenho</h3>
+                            <p class="ck-category__desc">
+                                Analisam índices de desempenho do site para oferecer melhor experiência ao visitante.
+                            </p>
+                        </div>
+                        <label class="ck-toggle" aria-label="Ativar cookies de desempenho">
+                            <input type="checkbox" id="ck-performance" name="performance">
+                            <span class="ck-toggle__slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Categoria: Publicidade -->
+                <div class="ck-category">
+                    <div class="ck-category__header">
+                        <div class="ck-category__info">
+                            <h3 class="ck-category__name">Publicidade</h3>
+                            <p class="ck-category__desc">
+                                Entregam anúncios personalizados com base nas páginas visitadas anteriormente.
+                            </p>
+                        </div>
+                        <label class="ck-toggle" aria-label="Ativar cookies de publicidade">
+                            <input type="checkbox" id="ck-advertising" name="advertising">
+                            <span class="ck-toggle__slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div><!-- /.ck-modal__body -->
+
+            <div class="ck-modal__footer">
+                <button id="ck-modal-reject" class="ck-btn ck-btn--outline">Rejeitar</button>
+                <button id="ck-modal-save" class="ck-btn ck-btn--ghost">Salvar Preferências</button>
+                <button id="ck-modal-accept-all" class="ck-btn ck-btn--primary">Aceitar todos</button>
+            </div>
+
+        </div><!-- /.ck-modal__box -->
+    </div><!-- /#ck-modal -->
+
+    <a href="https://wa.me/5521971534620?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." class="btn-flutuante-whatsapp" target="_blank" role="button" aria-label="Falar pelo WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="30" height="30" fill="currentColor">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                </svg>
+    </a>
+
+    <script src="cookie-banner.js" defer></script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LegalService",
+          "@id": "https://www.nohanaquintanilha.com.br/#negocio",
+          "name": "NOHANA QUINTANILHA Sociedade Individual de Advocacia | Direito Imobiliário | Usucapião",
+          "alternateName": "Nohana Quintanilha Advocacia",
+          "legalName": "Nohana Quintanilha Sociedade Individual de Advocacia",
+          "url": "https://www.nohanaquintanilha.com.br/",
+          "logo": "https://www.nohanaquintanilha.com.br/logos+favicon/img-empresa-desktop.webp",
+          "image": [
+            "https://www.nohanaquintanilha.com.br/Videos%20como%20chegar%20no%20escritorio%20e%20imagens%20no%20escritorio%20e%20equipe/hero-equipe.jpeg",
+            "https://www.nohanaquintanilha.com.br/Imagens%20da%20Doutora%20Nohana/hero-mobile.jpeg"
+          ],
+          "description": "Escritório especializado em direito imobiliário, usucapião e regularização de imóveis em Campo Grande, Rio de Janeiro.",
+          "telephone": "+55-21-97153-4620",
+          "email": "contato@nohanaquintanilha.com.br",
+          "priceRange": "$$$",
+          "currenciesAccepted": "BRL",
+          "paymentAccepted": "Cartão de Crédito, Pix, Transferência Bancária",
+          "foundingDate": "2023-01-01",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "14"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Maria Teresa, 260 - Loja B",
+            "addressLocality": "Rio de Janeiro",
+            "addressRegion": "RJ",
+            "postalCode": "23050-160",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-22.906551",
+            "longitude": "-43.568550"
+          },
+          "hasMap": "https://maps.google.com/?cid=6507652514548268365",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Rio de Janeiro",
+              "containedInPlace": {
+                "@type": "State",
+                "name": "Rio de Janeiro"
+              }
+            },
+            { "@type": "Place", "name": "Campo Grande" },
+            { "@type": "Place", "name": "Senador Vasconcelos" },
+            { "@type": "Place", "name": "Santíssimo" },
+            { "@type": "Place", "name": "Cosmos" },
+            { "@type": "Place", "name": "Inhoaíba" },
+            { "@type": "Place", "name": "Paciência" }
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Dra. Nohana Quintanilha",
+            "jobTitle": "Presidente da OAB de Campo Grande/RJ",
+            "description": "Referência em Direito Imobiliário, a Dra. Nohana é Presidente da OAB de Campo Grande/RJ, garantindo máxima credibilidade, honra e autoridade no trato de cada caso.",
+            "image": "https://www.nohanaquintanilha.com.br/Imagens%20da%20Doutora%20Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj%20(11).jpeg",
+            "sameAs": ["https://www.instagram.com/nohanaquintanilha_advocacia/"]
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Nohana Quintanilha Advocacia",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Usucapião",
+                  "description": "Regularização completa do seu imóvel de forma ágil e segura (judicial ou extrajudicial).",
+                  "areaServed": "Rio de Janeiro – RJ",
+                  "provider": { "@id": "https://www.nohanaquintanilha.com.br/#negocio" }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Direito Imobiliário",
+                  "description": "Soluções seguras para locação, condomínios e compra e venda.",
+                  "areaServed": "Rio de Janeiro – RJ",
+                  "provider": { "@id": "https://www.nohanaquintanilha.com.br/#negocio" }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Regularização de Imóveis",
+                  "description": "Emissão de certidões, registros e resolução de pendências em cartórios.",
+                  "areaServed": "Rio de Janeiro – RJ",
+                  "provider": { "@id": "https://www.nohanaquintanilha.com.br/#negocio" }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Direito de Família",
+                  "description": "Apoio estratégico e humanizado em inventários, divórcios e partilhas.",
+                  "areaServed": "Rio de Janeiro – RJ",
+                  "provider": { "@id": "https://www.nohanaquintanilha.com.br/#negocio" }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Direito Civil",
+                  "description": "Atendimento focado em contratos, indenizações e direito civil moderno.",
+                  "areaServed": "Rio de Janeiro – RJ",
+                  "provider": { "@id": "https://www.nohanaquintanilha.com.br/#negocio" }
+                }
+              }
+            ]
+          },
+          "sameAs": [
+            "https://share.google/m2Vr6a5Vae4eboNR0",
+            "https://www.instagram.com/nohanaquintanilha_advocacia/",
+            "https://www.facebook.com/nohanaadvocacia/",
+            "https://br.linkedin.com/in/nohanaquintanilha"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.nohanaquintanilha.com.br/#website",
+          "url": "https://www.nohanaquintanilha.com.br/",
+          "name": "Nohana Quintanilha Advocacia",
+          "publisher": { "@id": "https://www.nohanaquintanilha.com.br/#negocio" },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.nohanaquintanilha.com.br/#webpage",
+          "url": "https://www.nohanaquintanilha.com.br/",
+          "name": "Nohana Quintanilha Advocacia | Direito Imobiliário & Usucapião",
+          "description": "Escritório especializado em direito imobiliário, usucapião e regularização de imóveis em Campo Grande, Rio de Janeiro.",
+          "isPartOf": { "@id": "https://www.nohanaquintanilha.com.br/#website" },
+          "about": { "@id": "https://www.nohanaquintanilha.com.br/#negocio" },
+          "inLanguage": "pt-BR",
+          "datePublished": "2026-03-18",
+          "dateModified": "2026-03-18"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.nohanaquintanilha.com.br/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "O que é usucapião e como funciona?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A usucapião é uma forma de aquisição da propriedade de um imóvel através da posse prolongada e contínua. Existem diferentes tipos: usucapião extrajudicial (para casos mais simples, feito em cartório) e usucapião judicial (quando há necessidade de ação judicial). O prazo varia conforme o tipo, podendo ser de 5 a 15 anos dependendo das circunstâncias."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quanto tempo leva para regularizar um imóvel?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O tempo varia conforme a complexidade do caso. Usucapião extrajudicial pode levar de 3 a 6 meses. Processos judiciais podem levar de 1 a 3 anos, mas com nossa metodologia já atuamos de forma estratégica para dar o andamento necessário e destrancar casos antigos. Cada caso é único e faremos uma avaliação personalizada."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quais documentos são necessários?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Os documentos básicos incluem: comprovantes de residência, documentos pessoais, IPTU, contas de água/luz/telefone, testemunhos de vizinhos, e qualquer documentação relacionada ao imóvel. Durante a consulta inicial, analisamos seu caso específico e indicamos exatamente o que será necessário."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Atendem em outras cidades?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nosso escritório está localizado em Campo Grande, Rio de Janeiro, mas atendemos clientes de toda a região metropolitana e, dependendo do caso, também em outras localidades do estado do RJ. Entre em contato para verificar se podemos atender sua demanda."
+              }
+            }
+          ]
+        }
+      ]
+    }
     </script>
 </body>
 
