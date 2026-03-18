@@ -732,17 +732,58 @@
         .gal-5 { grid-column: 5 / 11; height: 500px; }
         
         @media (max-width: 900px) {
+            .editorial-gallery {
+                overflow: hidden;
+            }
+            .editorial-gallery .section-container {
+                padding: 0;
+                position: relative;
+            }
+            .editorial-gallery .section-container::before,
+            .editorial-gallery .section-container::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 40px;
+                z-index: 2;
+                pointer-events: none;
+            }
+            .editorial-gallery .section-container::before {
+                left: 0;
+                background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            }
+            .editorial-gallery .section-container::after {
+                right: 0;
+                background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            }
+            .editorial-gallery .section-tag, .editorial-gallery .section-title {
+                padding-left: var(--space-6);
+                padding-right: var(--space-6);
+            }
             .gallery-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 8px !important;
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                scroll-snap-type: x mandatory !important;
+                gap: 12px !important;
+                padding: 0 40px 20px 40px !important;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .gallery-grid::-webkit-scrollbar {
+                display: none;
             }
             .gal-item {
-                grid-column: span 1 !important;
+                flex: 0 0 80% !important;
+                scroll-snap-align: center !important;
+                height: 450px !important;
                 transform: none !important;
-                height: 200px !important;
                 margin-bottom: 0 !important;
+                position: relative;
+                border-radius: var(--radius-lg);
+                overflow: hidden;
             }
-            .gal-1 { grid-column: 1 / -1 !important; height: 300px !important; }
             .gal-item img {
                 height: 100% !important;
             }
@@ -755,7 +796,7 @@
                 <h2 class="section-title">Dra. Nohana em <span class="highlight text-bordo">Ação</span></h2>
             </div>
             
-            <div class="gallery-grid">
+            <div class="gallery-grid" id="story-gallery">
                 <div class="gal-item gal-1">
                     <img src="Imagens da Doutora Nohana/nohana+quintanilha-advocacia-direito+imobiliario-usucapiao-em-campo+grande-rio+de+janeiro-rj (18).jpeg" alt="Dra. Nohana - Trabalho Constante">
                 </div>
@@ -774,6 +815,39 @@
             </div>
         </div>
     </section>
+
+    <!-- Script para animação dos stories -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.getElementById('story-gallery');
+            if (gallery && window.innerWidth <= 900) {
+                let scrollSpeed = 1;
+                let isHovered = false;
+                let scrollInterval;
+                
+                const startScroll = () => {
+                    scrollInterval = setInterval(() => {
+                        if(!isHovered) {
+                            gallery.scrollLeft += scrollSpeed;
+                            if(gallery.scrollLeft >= (gallery.scrollWidth - gallery.clientWidth)) {
+                                scrollSpeed = -1; // reverte direção ao chegar no fim
+                            } else if (gallery.scrollLeft <= 0) {
+                                scrollSpeed = 1;
+                            }
+                        }
+                    }, 30);
+                };
+
+                startScroll();
+
+                gallery.addEventListener('touchstart', () => { isHovered = true; });
+                gallery.addEventListener('touchend', () => { 
+                    isHovered = false; 
+                    // Snap correction if needed
+                });
+            }
+        });
+    </script>
 
     <!-- Seção da Posse OAB -->
     <style>
@@ -825,6 +899,11 @@
             <div class="posse-header" style="text-align: center; max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
                 <span class="section-tag">Representatividade e Liderança</span>
                 <h2 class="section-title" style="white-space: nowrap;">Posse na <span class="highlight">OAB Campo Grande</span></h2>
+                
+                <div class="mobile-only-img-1" style="display: none; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: var(--space-6); margin-top: var(--space-4);">
+                    <img src="Imagens da Posse/posse_subsecao_campo_grande_21.jpeg" alt="Posse OAB" style="width: 100%;">
+                </div>
+
                 <div style="margin-top: var(--space-4); text-align: center; max-width: 600px; padding: 10px;">
                     <p class="section-subtitle" style="margin: 0; font-style: italic; font-size: 1.1rem; color: var(--dark-gray); text-align: center;">
                         “Queremos uma instituição próxima aos advogados e advogadas, queremos ser acolhedores.”
@@ -866,6 +945,14 @@
                     </div>
                     <div>
                         <img src="Imagens da Posse/posse_subsecao_campo_grande_5.jpeg" alt="Autoridades Posse OAB"
+                            class="posse-img">
+                    </div>
+                    <div>
+                        <img src="Imagens da Posse/posse_subsecao_campo_grande_1.jpg" alt="Equipe OAB"
+                            class="posse-img">
+                    </div>
+                    <div>
+                        <img src="Imagens da Posse/posse_subsecao_campo_grande_21.jpeg" alt="Momento Posse OAB"
                             class="posse-img">
                     </div>
                     <div class="span-2">
