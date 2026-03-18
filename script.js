@@ -534,6 +534,53 @@ document.addEventListener('DOMContentLoaded', () => {
             floatingCard.style.animation = 'none';
         }
     }
+
+    // ========================================
+    // HERO TYPEWRITER ANIMATION
+    // ========================================
+    const typeWriterTitle = document.getElementById('typewriter-title');
+    if (typeWriterTitle) {
+        const lines = [
+            "Representação",
+            "jurídica especializada",
+            "em que você pode",
+            "confiar."
+        ];
+        
+        typeWriterTitle.innerHTML = '<span class="tw-cursor">|</span>';
+        
+        let lineIndex = 0;
+        let charIndex = 0;
+        let currentHTML = '';
+        const typingSpeed = 45; // ms per character
+        
+        function typeWriter() {
+            if (lineIndex < lines.length) {
+                if (charIndex < lines[lineIndex].length) {
+                    // Type next char
+                    currentHTML += lines[lineIndex].charAt(charIndex);
+                    typeWriterTitle.innerHTML = currentHTML + '<span class="tw-cursor">|</span>';
+                    charIndex++;
+                    setTimeout(typeWriter, typingSpeed);
+                } else {
+                    // Line finished, add <br> logic
+                    if (lineIndex < lines.length - 1) {
+                        currentHTML += '<br>';
+                    }
+                    typeWriterTitle.innerHTML = currentHTML + '<span class="tw-cursor">|</span>';
+                    lineIndex++;
+                    charIndex = 0;
+                    setTimeout(typeWriter, typingSpeed + 100); // little pause at end of line
+                }
+            } else {
+                // Done
+                typeWriterTitle.innerHTML = currentHTML;
+            }
+        }
+        
+        // Start animation after slight delay
+        setTimeout(typeWriter, 400);
+    }
 });
 
 // ========================================

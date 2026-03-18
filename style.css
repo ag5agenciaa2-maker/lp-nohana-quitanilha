@@ -2732,3 +2732,20 @@
         justify-content: center;
     }
 }
+
+/* ========================================
+   HERO TYPEWRITER CURSOR
+   ======================================== */
+.tw-cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: var(--white);
+    margin-left: 5px;
+    animation: blinkCursor 0.8s infinite;
+    color: transparent; /* Makes the | invisible itself, just uses its background or pseudo-element */
+}
+
+@keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
