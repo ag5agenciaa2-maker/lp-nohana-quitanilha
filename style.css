@@ -1939,9 +1939,10 @@
     .footer-container {
         max-width: 1400px;
         margin: 0 auto;
-        padding: 0 var(--space-6);
+        padding: 0 var(--space-10);
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, auto);
+        justify-content: space-between;
         gap: var(--space-10);
         align-items: start;
         padding-bottom: 26px;
