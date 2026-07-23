@@ -143,6 +143,7 @@
     function acceptAll() {
         state = { necessary: true, functional: true, analytics: true, performance: true, advertising: true, decided: true };
         save(state);
+        syncToggles();
         dispatch(state);
         hideBanner();
         closeModal();
@@ -152,6 +153,7 @@
     function rejectAll() {
         state = { necessary: true, functional: false, analytics: false, performance: false, advertising: false, decided: true };
         save(state);
+        syncToggles();
         dispatch(state);
         hideBanner();
         closeModal();
@@ -162,6 +164,7 @@
         var custom = readToggles();
         state = Object.assign({}, custom, { decided: true });
         save(state);
+        syncToggles();
         dispatch(state);
         hideBanner();
         closeModal();
